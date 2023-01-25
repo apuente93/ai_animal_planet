@@ -3,6 +3,7 @@ const {crypto} = await import('crypto');
 const {qs} = await import('querystring');
 const readline = await import('readline');
 const oauth_lib = await import('oauth-1.0a');
+require('dotenv').config();
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -14,8 +15,8 @@ const rl = readline.createInterface({
 // To set environment variables on macOS or Linux, run the export commands below from the terminal:
 // export CONSUMER_KEY='YOUR-KEY'
 // export CONSUMER_SECRET='YOUR-SECRET'
-const consumer_key = 'tlfKGFtMzENzjAnjhMw7TwfSV';
-const consumer_secret = '2CXyDCdCHiFMnu3zhARUaVWVcJO41b1FlDcot5ZdOI9ufIxNCU';
+const consumer_key = process.env.TWITTER_KEY;
+const consumer_secret = process.env.TWITTER_SECRET;
 
 // Create authentication object using oauth
 const oauth = oauth_lib({
