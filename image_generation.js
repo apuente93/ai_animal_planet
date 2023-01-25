@@ -21,7 +21,7 @@ async function generatePrompt() {
 
 async function generateImage() {
     const response = await openai.createImage({
-        prompt: "Create a logo for an ai generating instagram account that generates images of beautiful natural occurances that happen in the world.",//await generatePrompt(),
+        prompt: await generatePrompt(),
         n: 1,
         size: "1024x1024",
     });

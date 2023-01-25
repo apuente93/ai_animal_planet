@@ -4,6 +4,8 @@
     "dotenv": "^16.0.3",
     "facebook-node-sdk": "^0.2.0",
     "got": "^12.5.3",
+    "instagram-private-api": "^1.45.3",
+    "instagram-web-api": "^2.2.2",
     "needle": "^3.2.0",
     "oauth": "^0.10.0",
     "oauth-1.0a": "^2.2.6",
