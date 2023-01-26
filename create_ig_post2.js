@@ -8,7 +8,7 @@ const { generateImage, generatePrompt } = require('./image_generation');
 
 (async () => {
 
-  const prompt = await generatePrompt("Generate a prompt for an AI-generated image of a beautiful natural occurance in the world including an animal or many animals. Make sure it is a different random occurance every time I ask you again. Here are 2 examples of prompts that could be generated: 1. A pack of exotic sharks, swimming together in the deep blue sea. 2. A bee polinating a plant, about to be eaten by a bear.");
+  const prompt = await generatePrompt("Generate a prompt for an AI-generated image of a beautiful natural occurance in the world including an animal or many animals. Make sure it is a different random occurance every time I ask you again. Here are 2 examples of prompts that could be generated: 1. A pack of exotic sharks, swimming in the deep blue ocean. 2. A group of snakes ready to attack a mouse nest. Please only generate one sentence (don't include the number) without punctuations and add instagram hashtags that are engaging.");
   console.log(prompt);
   const imageUrl = await generateImage(prompt);
   console.log(imageUrl);
