@@ -8,13 +8,14 @@ const { generateImage, generatePrompt } = require('./image_generation');
 
 (async () => {
 
-  const prompt = await generatePrompt("Generate a prompt for an AI-generated image of a beautiful natural occurance in the world including an animal or many animals. Make sure it is a different random occurance every time I ask you again. Here are 2 examples of prompts that could be generated: 1. A pack of exotic sharks, swimming in the deep blue ocean. 2. A group of snakes ready to attack a mouse nest. Please only generate one sentence (don't include the number) without punctuations and add instagram hashtags that are engaging.");
+  console.log("ai_animal_planet");
+  const prompt = await generatePrompt("Generate a random prompt of a natural occurance in the world including an animal or many animals. Here are 2 examples of prompts that could be generated: 1. A pack of exotic sharks, swimming in the deep blue ocean. 2. A group of snakes ready to attack a mouse nest. Please only generate one sentence (don't include the number) without punctuations and add atleast 10 instagram hashtags at the end, that are engaging and are known to attract many visitors and likes. Make sure the animal in your sentence is selected randomly from over 1 million distinct animals. Also make sure the natural occurence you select is randomized from 10 million natural occurances. Also, do not use flamingos, birds, zebras, elephants, horses or lions as the animals. Use different animals.");
   console.log(prompt);
   const imageUrl = await generateImage(prompt);
   console.log(imageUrl);
   const ig = new IgApiClient();
-  ig.state.generateDevice(process.env.INSTAGRAM_USERNAME);
-  const auth = await ig.account.login(process.env.INSTAGRAM_USERNAME, process.env.INSTAGRAM_PASSWORD);
+  ig.state.generateDevice("ai_animal_planet");
+  const auth = await ig.account.login("ai_animal_planet", "The7wonders!!");
   console.log(JSON.stringify(auth));
 
 

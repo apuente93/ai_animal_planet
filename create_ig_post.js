@@ -1,4 +1,5 @@
 const Facebook = require('facebook-node-sdk');
+require('dotenv').config();
 
 const facebook = new Facebook({
     appId: process.env.FACEBOOK_ID,
