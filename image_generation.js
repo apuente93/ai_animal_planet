@@ -5,7 +5,7 @@ const sharp = require('sharp');
 
 // Create a new OpenAI configuration
 const config = new Configuration({
-    apiKey: "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"
+    apiKey: process.env.OPEN_AI_KEY;
 });
 
 // Create a new OpenAI API client
